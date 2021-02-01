@@ -5,5 +5,7 @@ class CreateDnsServers < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    add_index :dns_servers, :ip_address, unique: true
   end
 end
